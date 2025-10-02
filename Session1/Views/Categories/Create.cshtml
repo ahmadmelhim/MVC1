@@ -1,0 +1,14 @@
+﻿@model Category
+<form method="post" action="/categories/store">
+    <div class="mb-3">
+        <label for="CName" class="form-label">Category name</label>
+        <input type="text" value="@Model.Name" name="name" class="form-control" id="CName" placeholder="Enter Category Name ...">
+        <span class="text-danger fw-bold" asp-validation-for="Name"> </span>
+    </div>
+    <div class="mb-3">
+        <label for="CDesc" class="form-label">Description</label>
+        <textarea name="Description" class="form-control" id="CDesc" placeholder="Enter Description ...">@Model?.Description</textarea>
+        <span class="text-danger fw-bold" asp-validation-for="Description"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-primary"> Create</button>
+</form>

@@ -6,12 +6,18 @@
 <body>
 
     <h1>All Users</h1>
-  
-
+        <a class="nav-link text-dark" href="/Categories/create"> Create</a>
+   
+    
     <ul>
+       
         @foreach (var item in @Model)
         {
-            <li>@item.Name , <a href="/categories/details/@item.Id"> Details</a></li>
+            <li>@item.Name 
+                <a href="/categories/details/@item.Id" class="btn btn-outline-info"> Details</a>
+                <a href="/categories/delete/@item.Id" class="btn btn-outline-danger"> Delete</a>
+                <a href="/categories/edit/@item.Id" class="btn btn-outline-primary"> Edit</a>
+            </li>
         }
     </ul>
 

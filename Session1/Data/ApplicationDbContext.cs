@@ -15,11 +15,11 @@ namespace Session1.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Ahmad 1" },
-                new Category { Id = 2, Name = "Ahmad 2" },
-                new Category { Id = 3, Name = "Ahmad 3" },
-                new Category { Id = 4, Name = "Ahmad 4" }
-                );
+                new Category { Id = 1, Name = "Ahmad 1", Description = "Description for Ahmad 1" },
+                new Category { Id = 2, Name = "Ahmad 2", Description = "Description for Ahmad 2" },
+                new Category { Id = 3, Name = "Ahmad 3", Description = "Description for Ahmad 3" },
+                new Category { Id = 4, Name = "Ahmad 4", Description = "Description for Ahmad 4" }
+            );
         }
     }
 }
